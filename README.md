@@ -1,4 +1,7 @@
 # mrs
+
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/michaelschwob/mrs?style=for-the-badge"> <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/michaelschwob/mrs?style=for-the-badge">
+
 My Personal R Package
 
 Contains several functions that I use frequently:
