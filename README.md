@@ -1,10 +1,9 @@
-# mrs
+# My Personal R Package
 
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/michaelschwob/mrs?style=for-the-badge"> <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/michaelschwob/mrs?style=for-the-badge">
 
-My Personal R Package
+## This is an R package that contains functions that I find myself using quite frequently.
 
-Contains several functions that I use frequently:
 
 mrs.load() loads all of the packages that I frequently use
 
