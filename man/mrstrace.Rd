@@ -1,38 +1,29 @@
-\name{mrs.load}
-\alias{mrs.load}
+\name{mrs.trace}
+\alias{mrs.trace}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
-Loads Packages
+ Generate Trace Plots
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-Loads packages that I commonly use:
-
-ggplot2 - for plotting
-
-ggpubr - for arranging plots
-
-mvtnorm - for multivariate normal and t distributions
-
-invgamma - for inverse-gamma distribution
-
-fields - for efficient diagonal multiplication
-
-tidyverse - for cleanliness
-
-progress - for progress bars
-
-bayestestR - for credible intervals
-
-coda - for convergence diagnostics
+ Generates a trace plot for the passed MCMC chain
 }
 \usage{
-mrs.load()
+mrs.trace(chain, par_name, thin = 1, burn = floor(length(chain)*0.1))
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-No argument needed.
+  \item{chain}{
+    The vector of the MCMC chain
+  }
+  \item{par_name}{
+    Optional: name for parameter
+  }
+  \item{thin}{
+    Optional: thinning step. Default is 1.
+  }
+  \item{burn}{
+    Optional: If you want a burn-in period on the MCMC chain. Default is 0.1*M.
+  }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
@@ -60,7 +51,13 @@ No argument needed.
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-mrs.load()
+library(ggplot2)
+chain=1:10000
+par_name="mu"
+thin=3
+burn = floor(length(chain)*0.1)
+test <- mrs.trace(chain, par_name, thin, burn)
+print(test)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
