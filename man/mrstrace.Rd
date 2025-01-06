@@ -24,6 +24,9 @@ mrs.trace(chain, par_name, thin = 1, burn = floor(length(chain)*0.1))
   \item{burn}{
     Optional: If you want a burn-in period on the MCMC chain. Default is 0.1*M.
   }
+  \item{mean}{
+    Optional: If true, plot the mean of the chain as a red line.
+  }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
